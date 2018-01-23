@@ -21,8 +21,8 @@ class Diamond {
     Collections.reverse(upperTriangle);
 
     upperTriangle
-      .subList(1, upperTriangle.size())
       .stream()
+        .skip(1)
       .collect(Collectors.joining("\n"))
   }
 
